@@ -3,7 +3,7 @@ import { styled } from '@mui/system';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import drone_image from '../../assets/images/cars.jpg';
+import car_image from '../../assets/images/cars.jpg';
 
 
 interface Props {
@@ -46,7 +46,7 @@ const NavA = styled(Link)({
 })
 
 const Main = styled('main')( {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${drone_image});`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${car_image});`,
     width: '100%',
     height: '100%',
     backgroundSize: 'cover',

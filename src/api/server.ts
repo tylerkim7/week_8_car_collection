@@ -1,9 +1,9 @@
-let token = 'api-token'
+let token = '69deb064567701ee298ddc5d8842cb6170269fbebff97981'
 
 
 export const serverCalls = {
     get : async () => {
-        const response = await fetch(`site-url`, {
+        const response = await fetch(`https://nettle-exciting-rake.glitch.me/api/cars`, {
             method: 'GET',
             headers:{
                 'Content-Type': 'application/json',
@@ -17,8 +17,8 @@ export const serverCalls = {
         return await response.json()
     },
 
-    create: async(data:{}) => {
-        const response = await fetch(`site-url`, {
+    create: async(data:any) => {
+        const response = await fetch(`https://nettle-exciting-rake.glitch.me/api/cars`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,8 +33,8 @@ export const serverCalls = {
         return await response.json()
     },
 
-    update: async (id: string, data:{}) => {
-        const response = await fetch(`site-url/${id}`, {
+    update: async (id: string, data:any) => {
+        const response = await fetch(`https://nettle-exciting-rake.glitch.me/api/cars/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ export const serverCalls = {
     },
 
     delete: async(id:string) => {
-        const response = await fetch(`site-url/${id}`, {
+        const response = await fetch(`https://nettle-exciting-rake.glitch.me/api/cars/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',

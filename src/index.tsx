@@ -1,8 +1,13 @@
+// React Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import { theme } from './Theme/themes'
+import { Provider } from 'react-redux';
+
+// Local Imports
+import { store } from './redux/store';
+import { theme } from './Theme/themes';
 import { Home, Dashboard, SignIn } from './components';
 import reportWebVitals from './reportWebVitals';
 import './styles.css';
@@ -12,6 +17,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <Provider store = {store}>
     <ThemeProvider theme={theme}>
     <Router>
       <Routes>
@@ -21,6 +27,8 @@ root.render(
       </Routes>
     </Router>
     </ThemeProvider>
+    </Provider>
+    
   </React.StrictMode>
 );
 

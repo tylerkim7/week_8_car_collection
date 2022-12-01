@@ -87,6 +87,9 @@ export const DataTable = () => {
     }
 
     console.log(gridData)
+    const MyAuth = localStorage.getItem('myAuth')
+    console.log(MyAuth)
+    if (MyAuth == "true"){
 
     return (
         <div style={{ height: 400, width: '100%' }}>
@@ -115,4 +118,11 @@ export const DataTable = () => {
             </Dialog>
         </div>
     )
+    } else {
+        return (
+            <div>
+                <h1>Please Sign In to View Your Drone Collection</h1>
+            </div>
+        )
+    }
 }

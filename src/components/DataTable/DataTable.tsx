@@ -121,7 +121,7 @@ export const DataTable = () => {
     } else {
         return (
             <div>
-                <h1>Please Sign In to View Your Drone Collection</h1>
+                <h1>Please Sign In to View Your Car Collection</h1>
             </div>
         )
     }
